@@ -14,6 +14,9 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "asin")
+    private String asin;
+
     @Column(name = "brand")
     private String brand;
 
@@ -108,6 +111,22 @@ public class Product {
 
     public void setAmazonLink(String amazonLink) {
         this.amazonLink = amazonLink;
+    }
+
+    public String getAsin() {
+        return asin;
+    }
+
+    public void setAsin(String asin) {
+        this.asin = asin;
+    }
+
+    public List<Image> getImages() {
+        return images;
+    }
+
+    public void setImages(List<Image> images) {
+        this.images = images;
     }
 
     public List<Bulletpoint> getBulletpoints() {
